@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='weather_details.css') }}">
+</head>
+<body>
+    <div class="weather-details-container">
+        <h1>{{ weather_info.city }}, {{ weather_info.country }}</h1>
+        <p>Temperature: {{ weather_info.temperature }}°</p>
+        <p>Description: {{ weather_info.description }}</p>
+
+        <!-- Display the weather icon -->
+        <img src="{{ weather_info.icon_url }}" alt="Weather Icon">
+
+    </div>
+</body>
+</html>
